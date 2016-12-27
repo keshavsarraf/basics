@@ -10,6 +10,14 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'tmhedberg/SimpylFold'
+
+let g:SimpylFold_fold_import = 0
+let g:SimpylFold_docstring_preview = 1
+
+
+Plugin 'jelera/vim-javascript-syntax'
+
 call vundle#end()
 
 map <C-n> :NERDTreeToggle<CR>
@@ -29,3 +37,7 @@ set cursorline
 set showmatch
 let python_highlight_all = 1
 
+autocmd BufEnter * call system("tmux rename-window " . expand("%:t"))
+autocmd VimLeave * call system("tmux rename-window bash")
+autocmd BufEnter * let &titlestring = ' ' . expand("%:t")                                                     
+set title
