@@ -12,9 +12,13 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tmhedberg/SimpylFold'
 
+Plugin 'vim-airline/vim-airline'
+set laststatus=2
+
 let g:SimpylFold_fold_import = 0
 let g:SimpylFold_docstring_preview = 1
 
+Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'jelera/vim-javascript-syntax'
 
@@ -37,6 +41,8 @@ set cursorline
 set showmatch
 let python_highlight_all = 1
 
+
+"settings to make tmux tabname match the filename
 autocmd BufEnter * call system("tmux rename-window " . expand("%:t"))
 autocmd VimLeave * call system("tmux rename-window bash")
 autocmd BufEnter * let &titlestring = ' ' . expand("%:t")                                                     
