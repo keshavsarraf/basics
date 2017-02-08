@@ -18,6 +18,7 @@ set laststatus=2
 let g:SimpylFold_fold_import = 0
 let g:SimpylFold_docstring_preview = 1
 
+
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'jelera/vim-javascript-syntax'
@@ -30,6 +31,7 @@ syntax on
 autocmd BufEnter * silent! lcd %:p:h
 filetype  plugin indent on
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype ruby setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype js setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype cfg setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype js setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
